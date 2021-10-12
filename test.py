@@ -1,5 +1,7 @@
 from modules.card import Card
 from modules.deck import Deck
+from modules.hand import Hand
+
 
 colors = ['RED','GREEN','BLUE','YELLOW']
 types  = ['0','1','2','3','4','5','6','7','8','9','skip','reverse','draw_2','draw_4','wild']
@@ -14,6 +16,13 @@ for color in colors:
 
 deck.shuffle()
 
-print(len(deck.get_cards()))
-print(deck.draw(10))
-print(len(deck.get_cards()))
+# player_1_hand = Hand()
+
+# print("The deck has ",len(deck.get_cards()))
+# print("Player hand has ",len(player_1_hand.get_cards()))
+
+# deck.draw(player_1_hand,10)
+
+# print("The deck has ",len(deck.get_cards()))
+# print("Player hand has ",len(player_1_hand.get_cards()))
+

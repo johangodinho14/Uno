@@ -12,8 +12,9 @@ class Card:
     def __init__(self,color,type_=None):    
         self.color = color
         self.type  = type_
+        self.id    = self.color + " " + self.type
 
     def get_properties(self):
-        return self.color, self.type
+        return self.color, self.type, self.id
 
 
