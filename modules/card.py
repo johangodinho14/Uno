@@ -17,12 +17,3 @@ class Card:
         return self.color, self.type
 
 
-
-class test:
-    def __init__(self,color,type_=None):    
-        self.color = color
-        self.type  = type_
-
-    def get_properties(self):
-        return self.color, self.type
-
