@@ -1,21 +1,42 @@
 import random
+from modules.system import System
+from modules.card   import Card
 
 class Deck:
-    '''
+    """
     About - Includes all functions relating to the deck:
-        * Add          - Add a card to the deck
-        * Draw         - Draw (amount) number of cards from the deck and deposit them into the player hand (cards)
-        * Get_top_card - Returns the top card of the deck
-        * Get_cards    - Returns the deck (list)
-        * Shuffle      - Shuffles all cards in the deck (list)
-    '''
+        * Add           - Add a card to the deck
+        * Populate_deck - Uses class (Card) to populate the deck with cards, based on the `config.js` file
+        * Draw          - Draw (amount) number of cards from the deck and deposit them into the player hand (cards)
+        * Get_top_card  - Returns the top card of the deck
+        * Get_cards     - Returns the deck (list)
+        * Shuffle       - Shuffles all cards in the deck (list)
+    
+    Dependencies:
+        * Internal module - System
+        * Internal module - Card
+        * External module - random
+    """
 
     def __init__(self):
         self.deck        = []
+        self.system      = System()
     
     #Add a card to the deck
     def add(self,card):
         self.deck.append(card)
+
+    #Uses Class Card to create an instance of card for each card color and card type present in config 
+    #Populates deck with cards
+    def populate_deck(self):
+        meta_data   = self.system.parse_config()
+        card_colors, card_types = meta_data
+        
+        for card_color in card_colors:
+            for card_type in card_types:
+                card        = Card(card_color,card_type)
+                self.add(card)
+        
     
     #Draw a given (amount) -> int of cards from the deck and them add them to the player hand provided
     def draw(self,player_hand,amount=1):

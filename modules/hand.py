@@ -1,12 +1,15 @@
 class Hand:
-    '''
+    """
     About - Includes all functions relating to a player hand (cards a player has):
         * Add                   - Add cards to the card
         * Get_cards             - Returns all cards in the player hand
         * Transfer_card         - Moves / Transfers a given card from the player hand to the main deck
-    '''
+    
+    Dependencies:
+        * None
+    """
 
-    def __init__(self,player_id=""):
+    def __init__(self):
         self.cards     = []
 
     #Add card to player hand

@@ -7,6 +7,9 @@ class Card:
 
         Output : 
             Getter (properties) -> Properties of the card will be returned if method is called
+        
+        Dependencies:
+            * None
     '''
     
     def __init__(self,color,type_=None):    
