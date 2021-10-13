@@ -24,8 +24,11 @@ class Hand:
     
     #Removes card from player hand and transfers it back to the deck    
     def transfer_card(self,card,deck):
-        self.__cards.remove(card)
-        deck.add(card)
+        if len(self.__cards) > 0:
+            self.__cards.remove(card)
+            deck.add(card)
+        else:
+            print("Hand has no cards")
 
     #Shows cards the player currently has
     def show_cards(self):
