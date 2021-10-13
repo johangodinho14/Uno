@@ -13,11 +13,11 @@ class Card:
     '''
     
     def __init__(self,color,type_=None):    
-        self.color = color
-        self.type  = type_
-        self.id    = self.color + " " + self.type
+        self.__color = color
+        self.__type  = type_
+        self.__id    = self.__color + " " + self.__type
 
     def get_properties(self):
-        return self.color, self.type, self.id
+        return self.__color, self.__type, self.__id
 
 

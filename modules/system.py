@@ -1,14 +1,14 @@
 import json
 
 class System:
-    """
+    '''
         About - Utilites provided by the game system 
             * Read_config   - Reads config file and returns the file_ object
             * Parse_config  - Loads in json file and parses it. Returns card_colors (list) and  card_types (list)
 
          Dependencies:
             * External module - json
-    """
+    '''
 
     def __init__(self):
         pass

@@ -3,7 +3,7 @@ from modules.system import System
 from modules.card   import Card
 
 class Deck:
-    """
+    '''
     About - Includes all functions relating to the deck:
         * Add           - Add a card to the deck
         * Populate_deck - Uses class (Card) to populate the deck with cards, based on the `config.js` file
@@ -16,20 +16,20 @@ class Deck:
         * Internal module - System
         * Internal module - Card
         * External module - random
-    """
+    '''
 
     def __init__(self):
-        self.deck        = []
-        self.system      = System()
+        self.__deck        = []
+        self.__system      = System()
     
     #Add a card to the deck
     def add(self,card):
-        self.deck.append(card)
+        self.__deck.append(card)
 
     #Uses Class Card to create an instance of card for each card color and card type present in config 
     #Populates deck with cards
     def populate_deck(self):
-        meta_data   = self.system.parse_config()
+        meta_data   = self.__system.parse_config()
         card_colors, card_types = meta_data
         
         for card_color in card_colors:
@@ -40,29 +40,31 @@ class Deck:
     
     #Draw a given (amount) -> int of cards from the deck and them add them to the player hand provided
     def draw(self,player_hand,amount=1):
-        if amount > len(self.deck):
-            return "Not enough cards in the deck to draw."
+        if amount > len(self.__deck):
+            print("Not enough cards in the deck to draw.")
+            return
 
         drawn_cards = []
         for i in range(0,amount):
-            random_card_index = random.randint(0,len(self.deck)-1)
-            random_card       = self.deck[random_card_index]
+            random_card_index = random.randint(0,len(self.__deck)-1)
+            random_card       = self.__deck[random_card_index]
 
             drawn_cards.append(random_card)
-            self.deck.remove(random_card)
+            self.__deck.remove(random_card)
 
         player_hand.add(drawn_cards)
 
     #Get the properties of the card on the top of the deck
     def get_top_card(self):
-        return self.deck[-1]
+        return self.__deck[-1]
 
     #Get a list of cards available in the deck (list)
     def get_cards(self):
-        return self.deck
+        return self.__deck
     
     #Shuffle the cards in the deck (list)
     def shuffle(self):
-        random.shuffle(self.deck)
+        random.shuffle(self.__deck)
         
+    
 
