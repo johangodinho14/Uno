@@ -1,13 +1,16 @@
 import json
+import os
 
 class System:
     '''
         About - Utilites provided by the game system 
             * Read_config   - Reads config file and returns the file_ object
             * Parse_config  - Loads in json file and parses it. Returns card_colors (list) and  card_types (list)
+            * Clear_screen  - Clears the terminal
 
          Dependencies:
             * External module - json
+            * External module - os
     '''
 
     def __init__(self):
@@ -29,5 +32,8 @@ class System:
             card_colors = config['colors']
             card_types  = config['types']
             return card_colors, card_types
+    
+    def clear_screen(self):
+        os.system('cls')
 
    

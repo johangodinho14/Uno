@@ -16,7 +16,7 @@ class Deck:
     Dependencies:
         * Internal module - System
         * Internal module - Card
-        * External module - random
+        * External module - random  
     '''
 
     def __init__(self):
