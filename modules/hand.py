@@ -33,10 +33,17 @@ class Hand:
     #Shows cards the player currently has
     def show_cards(self):
         player_cards = self.get_cards()
-        print("Card count : ",len(player_cards))
-        print("Your cards -> \n")
 
+        print("Your Card count     : "+str(len(player_cards)),"\n")
+
+        print(20*"-" + " Player Cards " + 20*"-" + "\n")
+        
         for i in range(0,len(player_cards)):
             card = player_cards[i]
             card_color, card_type, card_id = card.get_properties()
-            print(str(i+1)+". "+card_id)
+            print("["+str(i+1)+"] "+card_id)
+
+        print("")
+        print(54*"-")
+
+        

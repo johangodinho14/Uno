@@ -9,14 +9,15 @@ class Menu:
 
          Dependencies:
             * External module - Colorama
+            * Internal module - System
     '''
 
     def __init__(self):
-        self.system = System()
+        self.__system = System()
         init(convert=True)
     
     def show_main_menu(self):
-        self.system.clear_screen()
+        self.__system.clear_screen()
         string = "\n"
         string += 20*"-" + " UNO Main Menu " + 20*"-" + "\n\n" 
         string += " [1] Start Game (Player V Computer) \n"
@@ -26,20 +27,17 @@ class Menu:
 
         print(Fore.GREEN)
         print(string)
-        print(Fore.WHITE)
        
     def show_sub_menu(self):
-        self.system.clear_screen()
         string = "\n"
         string += 20*"-" + " UNO Sub Menu " + 20*"-" + "\n\n" 
         string += " [1] Use a card from your deck \n"
         string += " [2] Pull a card from the deck \n"
-        string += " [3] View your cards\n\n"
+        string += " [3] Quit to main menu\n\n"
         string += 54*"-"
 
-        print(Fore.RED)
+        print(Fore.GREEN)
         print(string)
-        print(Fore.WHITE)
 
     
 
