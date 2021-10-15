@@ -67,7 +67,9 @@ class Deck:
     
     #Shuffle the cards in the deck (list)
     def shuffle(self):
-        random.shuffle(self.__deck)
+        #Making sure the top card of the deck is not a wild card
+        while self.get_top_card().get_properties()[-2] == "WILD":
+            random.shuffle(self.__deck)
         
     #Check if the card player has hit matches the top card of the deck
     def match(self,card):
@@ -80,4 +82,4 @@ class Deck:
         elif player_card_type == "WILD":
             return {"match":True,"wild":True}
         else:
-            return False
+            return {"match":False,"wild":False}
