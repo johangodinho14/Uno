@@ -6,6 +6,7 @@ class Menu:
         About - Utilities related to the Game Menu's 
             * Show_main_menu  - Displays Main Menu
             * Show_sub_menu   - Displays Sub Menu
+            * Show_color_menu - Displays Color Menu on wild card color selection
 
          Dependencies:
             * External module - Colorama
@@ -39,5 +40,15 @@ class Menu:
         print(Fore.GREEN)
         print(string)
 
-    
+    def show_color_menu(self):
+        string = "\n"
+        string += 20*"-" + " UNO Sub Menu " + 20*"-" + "\n\n" 
+        string += " [1] RED   \n"
+        string += " [2] GREEN \n"
+        string += " [3] BLUE  \n"
+        string += " [4] YELLOW \n\n"
+        string += 54*"-"
 
+        print(Fore.GREEN)
+        print(string)
+        print(Fore.YELLOW)

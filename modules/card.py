@@ -19,5 +19,8 @@ class Card:
 
     def get_properties(self):
         return self.__color, self.__type, self.__id
-
+    
+    def set_color(self,color):
+        self.__color = color
+        self.__id    = self.__color + " " + self.__type
 

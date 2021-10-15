@@ -5,13 +5,14 @@ from modules.card   import Card
 class Deck:
     '''
     About - Includes all functions relating to the deck:
-        * Add           - Add a card to the deck
-        * Populate_deck - Uses class (Card) to populate the deck with cards, based on the `config.js` file
-        * Draw          - Draw (amount) number of cards from the deck and deposit them into the player hand (cards)
-        * Get_top_card  - Returns the top card of the deck
-        * Get_cards     - Returns the deck (list)
-        * Shuffle       - Shuffles all cards in the deck (list)
-        * Match         - Matches player card to the card at the top of the deck, includes handle for Wild card
+        * Add                   - Add a card to the deck
+        * Populate_deck         - Uses class (Card) to populate the deck with cards, based on the `config.js` file
+        * Draw                  - Draw (amount) number of cards from the deck and deposit them into the player hand (cards)
+        * Get_top_card          - Returns the top card of the deck
+        * Get_cards             - Returns the deck (list)
+        * Shuffle               - Shuffles all cards in the deck (list)
+        * Match                 - Matches player card to the card at the top of the deck, includes handle for Wild card
+        * Reset_wild_card_color - Finds wild card and resets its color to black
     
     Dependencies:
         * Internal module - System
@@ -83,3 +84,10 @@ class Deck:
             return {"match":True,"wild":True}
         else:
             return {"match":False,"wild":False}
+
+
+    def reset_wild_card_color(self):
+        #Finding wild card in the deck and resetting its color to BLACK
+        for card in self.__deck:
+            if card.get_properties()[-2] == "WILD":
+                card.set_color("BLACK")

@@ -5,6 +5,8 @@ class Hand:
         * Get_cards             - Returns all cards in the player hand
         * Transfer_card         - Moves / Transfers a given card from the player hand to the main deck
         * Show_cards            - Displays / Prints all the cards in a player's hand
+        * Set_wild_card_color   - Finds wild card and changes its color to the given argument / parameter
+
     
     Dependencies:
         * None
@@ -41,9 +43,15 @@ class Hand:
         for i in range(0,len(player_cards)):
             card = player_cards[i]
             card_color, card_type, card_id = card.get_properties()
-            print("["+str(i+1)+"] "+card_id)
+            print(" ["+str(i+1)+"] "+card_id)
 
         print("")
         print(54*"-")
+
+    def set_wild_card_color(self,color):
+        #Finding wild card in the deck and setting custom color based on user's choice
+        for card in self.__cards:
+            if card.get_properties()[-2] == "WILD":
+                card.set_color(color)
 
         
