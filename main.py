@@ -1,14 +1,10 @@
 #Importing all internal and external modules
-from os import system
+import sys
 import time
 from colorama import Fore
 from modules.system import System
 from modules.menu   import Menu
 from modules.game   import Game
-
-
-
-
 
 #Instantiating classes
 menu    = Menu()
@@ -97,7 +93,7 @@ def main_menu():
         system.clear_screen()
         print("\n Thanks for playing UNO")
         print(" Developed by JJ")
-        return
+        sys.exit()
         
     else:
         main_menu()
