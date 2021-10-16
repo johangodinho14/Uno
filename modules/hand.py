@@ -1,3 +1,7 @@
+from colorama import Fore
+import time
+from modules.inputs import Inputs
+
 class Hand:
     '''
     About - Includes all functions relating to a player hand (cards a player has):
@@ -7,13 +11,14 @@ class Hand:
         * Show_cards            - Displays / Prints all the cards in a player's hand
         * Set_wild_card_color   - Finds wild card and changes its color to the given argument / parameter
 
-    
     Dependencies:
-        * None
+        * External - Colorama
+        * Internal - Inputs
     '''
 
     def __init__(self):
         self.__cards     = []
+        self.__inputs    = Inputs()
 
     #Add card to player hand
     def add(self,cards):
@@ -54,4 +59,50 @@ class Hand:
             if card.get_properties()[-2] == "WILD":
                 card.set_color(color)
 
+    def use_card(self,card_index,deck):
+        selected_card = self.get_cards()[card_index]
+
+        #Check if the selected card matches the top card of the deck (match = either number or colors match)
+        check_result = deck.match(selected_card)
+        match_check  = check_result['match']
+        wild_check   = check_result['wild']
+
+        #Checking what combination of cards was satisfied if any
+        if wild_check == True and match_check == True:
+            wild_card_color  = self.__inputs.get_wild_card_color()
+            self.set_wild_card_color(wild_card_color)
+            self.transfer_card(selected_card,deck)
+
+        if match_check == True and wild_check == False:
+            self.transfer_card(selected_card,deck)
         
+        if match_check == False and wild_check == False:
+            if self.check_for_matching_cards(deck.get_top_card()) == True:
+                print(Fore.RED+"You cannot use this card"+Fore.YELLOW)
+                time.sleep(1)
+                return True
+            else:
+                print(Fore.RED+"You don't have any matching cards, A card will be pulled from the deck"+Fore.YELLOW)
+                deck.draw(self,amount=1)
+                time.sleep(1)
+                return False
+            
+
+    def check_for_matching_cards(self,top_card):
+        power_cards = ["SKIP","REVERSE","DRAW 2","DRAW 4"]
+
+        for card in self.__cards:
+            card_type = card.get_properties()[-2]
+            card_color= card.get_properties()[-3]
+            
+            #Excluding color match if the top card is a power card
+            if top_card.get_properties()[-2] in power_cards:
+                if card_type == "WILD" or card_type ==  top_card.get_properties()[-2]:
+                    return True
+            else:
+                if card_type == "WILD" or card_type ==  top_card.get_properties()[-2] or card_color == top_card.get_properties()[-3]:
+                    return True
+                    
+        return False
+
+

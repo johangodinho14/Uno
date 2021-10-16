@@ -69,21 +69,31 @@ class Deck:
     #Shuffle the cards in the deck (list)
     def shuffle(self):
         #Making sure the top card of the deck is not a wild card
+        random.shuffle(self.__deck)
         while self.get_top_card().get_properties()[-2] == "WILD":
             random.shuffle(self.__deck)
         
+        
     #Check if the card player has hit matches the top card of the deck
     def match(self,card):
+        power_cards = ["SKIP","REVERSE","DRAW 2","DRAW 4"]
+
         top_card_color, top_card_type, top_card_id          = self.get_top_card().get_properties()
         player_card_color, player_card_type, player_card_id = card.get_properties()
 
         #Conditions based on which the user can hit the selected card 
-        if top_card_color == player_card_color or top_card_type == player_card_type:
-            return {"match":True,"wild":False}
-        elif player_card_type == "WILD":
-            return {"match":True,"wild":True}
+        if top_card_type in power_cards:
+            if top_card_type == player_card_type:
+                return {"match":True,"wild":False}
+            else:
+                return {"match":False,"wild":False}
         else:
-            return {"match":False,"wild":False}
+            if top_card_color == player_card_color or top_card_type == player_card_type:
+                return {"match":True,"wild":False}
+            elif player_card_type == "WILD":
+                return {"match":True,"wild":True}
+            else:
+                return {"match":False,"wild":False}
 
 
     def reset_wild_card_color(self):

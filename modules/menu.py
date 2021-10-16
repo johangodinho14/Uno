@@ -43,10 +43,12 @@ class Menu:
     def show_color_menu(self):
         string = "\n"
         string += 20*"-" + " UNO Sub Menu " + 20*"-" + "\n\n" 
-        string += " [1] RED   \n"
-        string += " [2] GREEN \n"
-        string += " [3] BLUE  \n"
-        string += " [4] YELLOW \n\n"
+
+        card_colors = self.__system.parse_config()[-2]
+        for i in range(0,len(card_colors)):
+            string += f" [{i+1}] {card_colors[i]}\n"
+        
+        string+= "\n"
         string += 54*"-"
 
         print(Fore.GREEN)
