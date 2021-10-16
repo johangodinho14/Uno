@@ -5,10 +5,25 @@ from colorama import Fore
 from modules.system import System
 from modules.menu   import Menu
 from modules.game   import Game
+from modules.computer import Computer
 
 #Instantiating classes
-menu    = Menu()
-system = System()
+menu        = Menu()
+system      = System()
+computer    = Computer()
+
+def computer_turn(deck,computer_hand):
+    print("Computer is thinking...")
+
+    computer_hand.show_cards()
+    print(computer.check_move(deck,computer_hand)['move'])
+    print(computer.check_move(deck,computer_hand)['card'].get_properties())
+
+    input()
+
+
+
+
 
 
 def player_turn(game,deck,player_hand):
@@ -72,13 +87,14 @@ def start_game():
     while 1:
         turn = game.get_turn()
 
+        #Handling wild cards
         if turn == 1:
             player_turn(game=game,deck=deck,player_hand=player_hand)
 
         else:
-            input("computer turn")
+            computer_turn(deck=deck,computer_hand=computer_hand)
         
-        game.next_turn()
+        game.handle_power_card()
 
 
 def main_menu():

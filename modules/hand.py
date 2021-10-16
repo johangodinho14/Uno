@@ -53,11 +53,15 @@ class Hand:
         print("")
         print(54*"-")
 
-    def set_wild_card_color(self,color):
+    def set_wild_card_color(self,color,card_index):
         #Finding wild card in the deck and setting custom color based on user's choice
-        for card in self.__cards:
-            if card.get_properties()[-2] == "WILD":
-                card.set_color(color)
+        # for card in self.__cards:
+        #     if card.get_properties()[-2] == "WILD":
+        #         card.set_color(color)
+
+        self.__cards[card_index].set_color(color)
+
+        
 
     def use_card(self,card_index,deck):
         selected_card = self.get_cards()[card_index]
@@ -70,7 +74,7 @@ class Hand:
         #Checking what combination of cards was satisfied if any
         if wild_check == True and match_check == True:
             wild_card_color  = self.__inputs.get_wild_card_color()
-            self.set_wild_card_color(wild_card_color)
+            self.set_wild_card_color(wild_card_color,card_index)
             self.transfer_card(selected_card,deck)
 
         if match_check == True and wild_check == False:

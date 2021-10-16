@@ -18,8 +18,6 @@ class Game:
         self.__deck.populate_deck()
         self.__deck.shuffle()
 
-        print(self.__deck.get_top_card().get_properties())
-
         # Hands (Computer and Player)
         self.__computer_hand = Hand()
         self.__player_hand   = Hand()
@@ -60,3 +58,28 @@ class Game:
             self.__turn = 1
         else:
             self.__turn = 2
+
+    def handle_power_card(self):
+        card_type = self.__deck.get_top_card().get_properties()[-2]
+        if card_type == "REVERSE":
+            self.next_turn()
+            self.next_turn()
+        
+        elif card_type == "DRAW 2":
+            if self.get_turn() == 1:
+                self.__deck.draw(self.__player_hand,amount=2)
+            else:
+                self.__deck.draw(self.__computer_hand,amount=2)
+
+        elif card_type == "DRAW 4":
+            if self.get_turn() == 1:
+                self.__deck.draw(self.__player_hand,amount=4)
+            else:
+                self.__deck.draw(self.__computer_hand,amount=4)
+        
+        elif card_type == "WILD":
+            self.__deck.reset_wild_card_color()
+        
+        else:
+            self.next_turn()
+        
