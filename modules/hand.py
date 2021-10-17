@@ -54,11 +54,6 @@ class Hand:
         print(54*"-")
 
     def set_wild_card_color(self,color,card_index):
-        #Finding wild card in the deck and setting custom color based on user's choice
-        # for card in self.__cards:
-        #     if card.get_properties()[-2] == "WILD":
-        #         card.set_color(color)
-
         self.__cards[card_index].set_color(color)
 
         
@@ -79,7 +74,7 @@ class Hand:
 
         if match_check == True and wild_check == False:
             self.transfer_card(selected_card,deck)
-        
+
         if match_check == False and wild_check == False:
             if self.check_for_matching_cards(deck.get_top_card()) == True:
                 print(Fore.RED+"You cannot use this card"+Fore.YELLOW)
@@ -93,17 +88,10 @@ class Hand:
             
 
     def check_for_matching_cards(self,top_card):
-        # power_cards = ["SKIP","REVERSE","DRAW 2","DRAW 4"]
-
         for card in self.__cards:
             card_type = card.get_properties()[-2]
             card_color= card.get_properties()[-3]
             
-            #Excluding color match if the top card is a power card
-            # if top_card.get_properties()[-2] in power_cards:
-            # if card_type == "WILD" or card_type ==  top_card.get_properties()[-2]:
-            #         return True
-            # else:
             if card_type == "WILD" or card_type ==  top_card.get_properties()[-2] or card_color == top_card.get_properties()[-3]:
                     return True
                     

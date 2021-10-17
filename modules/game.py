@@ -67,29 +67,30 @@ class Game:
 
     def handle_power_card(self):
         card_type = self.__deck.get_top_card().get_properties()[-2]
-        if card_type == "REVERSE" and self.__top_card_used == False:
+        if card_type == "REVERSE" and self.get_top_card_status() == False:
             self.next_turn()
             self.next_turn()
         
-        elif card_type == "DRAW 2" and self.__top_card_used == False:
+        elif card_type == "DRAW 2" and self.get_top_card_status() == False:
             if self.get_turn() == 1:
                 self.__deck.draw(self.__computer_hand,amount=2)
             else:
                 self.__deck.draw(self.__player_hand,amount=2)
 
-        elif card_type == "DRAW 4" and self.__top_card_used == False:
+        elif card_type == "DRAW 4" and self.get_top_card_status() == False:
             if self.get_turn() == 1:
                 self.__deck.draw(self.__computer_hand,amount=4)
             else:
                 self.__deck.draw(self.__player_hand,amount=4)
 
-        elif card_type == "SKIP" and self.__top_card_used == False:
+        elif card_type == "SKIP" and self.get_top_card_status() == False:
             self.next_turn()
             self.next_turn()
-        
-        elif card_type == "WILD" and self.__top_card_used == False:
-            self.__deck.reset_wild_card_color()
         
         else:
             self.next_turn()
+
+        #If the top card isn't a wild card we make sure all wild cards in the deck are resetted to black
+        if card_type != "WILD":                    
+             self.__deck.reset_wild_card_color()
         

@@ -1,4 +1,2 @@
 * Wild card sometimes gets drawn as the top card of the deck
-* Skip card needs to be programmed into game->handle_power_card()
-* game -> handle_power_card() -> Has an bug as it always uses the power card 
 * Computer added functionality

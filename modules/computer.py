@@ -3,6 +3,14 @@ from modules.system import System
 
 
 class Computer:
+    '''
+    About - Includes all functions relating to the computer (context: computer player):
+        * Check_move                 - Returns whether the computer should use a card or pull a card from the deck
+      
+    Dependencies:
+        * Internal module - System
+        * External module - Random
+    '''
 
     def __init__(self):
         self.__system = System()
@@ -21,18 +29,18 @@ class Computer:
             else:
                 use_card = False
 
-        if use_card == True and match_result['wild'] == True:
+        if match_result['wild'] == True:
             available_colors = self.__system.parse_config()[-2]
             selected_color   = random.choice(available_colors)
             computer_hand.set_wild_card_color(selected_color,i)
             
-            return {"move":"use_card","card":computer_card}
+            return {"move":"use_card","card":computer_hand.get_cards()[i]}
 
-        elif use_card == True:
+        elif match_result['match'] == True:
             return {"move":"use_card","card":computer_card} 
         
         else:
-            return {"move":"pull_card"}
+            return {"move":"pull_card","card":None}
 
 
             

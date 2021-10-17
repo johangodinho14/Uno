@@ -6,8 +6,9 @@ class Card:
             2. type_ -> string representing type_ of the card
 
         Output : 
-            Getter (properties) -> Properties of the card will be returned if method is called
-        
+            Get_properties (properties) -> Properties of the card will be returned if method is called
+            Set_color                   -> Allows you to change the color of a given card (param)
+            
         Dependencies:
             * None
     '''

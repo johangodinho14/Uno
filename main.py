@@ -22,10 +22,6 @@ def computer_turn(deck,computer_hand):
     input()
 
 
-
-
-
-
 def player_turn(game,deck,player_hand):
     #Displaying Player Stats and Sub-Menu
     game.show_player_stats()
@@ -42,9 +38,18 @@ def player_turn(game,deck,player_hand):
                 selected_card_index = int(input(Fore.YELLOW+"Please select a card    : "))
                 if selected_card_index <= len(player_hand.get_cards()):
                         #Returns true if player has a card that can be used 
-                        if player_hand.use_card(selected_card_index-1,deck) == True:
+                        use_hand_status = player_hand.use_card(selected_card_index-1,deck)
+
+                        if  use_hand_status == True:
                             continue
+                        elif use_hand_status == None:
+                            game.top_card_used(False)
+                            player_action = ""
+                            game.show_player_stats()
+                            input("\nPress Enter to continue")
+                            break
                         else:
+                            game.top_card_used(True)
                             player_action = ""
                             game.show_player_stats()
                             input("\nPress Enter to continue")
@@ -61,6 +66,7 @@ def player_turn(game,deck,player_hand):
     #Options -> Draw card
     elif player_action == "2":
         if len(deck.get_cards())>1:
+            game.top_card_used(True)
             deck.draw(player_hand=player_hand,amount=1)
             game.show_player_stats()
             print("\n You drew a card")
