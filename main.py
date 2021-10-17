@@ -93,7 +93,6 @@ def start_game():
     while 1:
         turn = game.get_turn()
 
-        #Handling wild cards
         if turn == 1:
             player_turn(game=game,deck=deck,player_hand=player_hand)
 
