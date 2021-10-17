@@ -3,6 +3,26 @@ from modules.hand import Hand
 from modules.system import System
 
 class Game:
+    '''
+    About - Includes all functions relating to the game:
+        * Init game             - Runs's all functions required to initialise a game
+        * Get computer hand     - Returns all cards in the computer hand
+        * Get player hand       - Returns all cards in the player hand
+        * Get deck              - Returns deck 
+        * Show player stats     - Displays count of player and computer cards and displays all cards in player hand
+        * Get turn              - Returns Integer representing who's turn it is i:e (1 = Player 2 = Computer)
+        * Next turn             - Switches from current player turn to next player turn
+        * Top card used         - Setter - Allows status of the top card to be set with regards to whether it has already been used
+        * Get top card status   - Getter - Gets status of whether the top card has already been used (mainly if it was a power card)
+        * Handle power card     - Handles all actions relating to the power cards played e.g. reverse, draw, skip, etc.
+        
+    
+    Dependencies:
+        * Internal module - Deck
+        * Internal module - Hand
+        * Internal module - System
+    '''
+
     def __init__(self,initial_cards):
         self.__deck          = Deck()
         self.__computer_hand = Hand()
