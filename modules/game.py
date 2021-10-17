@@ -10,7 +10,7 @@ class Game:
         self.__system        = System()
         self.__turn          = 1  # 1 = Player 2 = Computer
         self.__initial_cards = initial_cards
-        pass
+        self.__top_card_used = False
 
     def init_game(self):
         # Starting the game
@@ -59,25 +59,35 @@ class Game:
         else:
             self.__turn = 2
 
+    def top_card_used(self,status):
+        self.__top_card_used = status
+    
+    def get_top_card_status(self):
+        return self.__top_card_used
+
     def handle_power_card(self):
         card_type = self.__deck.get_top_card().get_properties()[-2]
-        if card_type == "REVERSE":
+        if card_type == "REVERSE" and self.__top_card_used == False:
             self.next_turn()
             self.next_turn()
         
-        elif card_type == "DRAW 2":
+        elif card_type == "DRAW 2" and self.__top_card_used == False:
             if self.get_turn() == 1:
-                self.__deck.draw(self.__player_hand,amount=2)
-            else:
                 self.__deck.draw(self.__computer_hand,amount=2)
-
-        elif card_type == "DRAW 4":
-            if self.get_turn() == 1:
-                self.__deck.draw(self.__player_hand,amount=4)
             else:
+                self.__deck.draw(self.__player_hand,amount=2)
+
+        elif card_type == "DRAW 4" and self.__top_card_used == False:
+            if self.get_turn() == 1:
                 self.__deck.draw(self.__computer_hand,amount=4)
+            else:
+                self.__deck.draw(self.__player_hand,amount=4)
+
+        elif card_type == "SKIP" and self.__top_card_used == False:
+            self.next_turn()
+            self.next_turn()
         
-        elif card_type == "WILD":
+        elif card_type == "WILD" and self.__top_card_used == False:
             self.__deck.reset_wild_card_color()
         
         else:
