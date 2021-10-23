@@ -79,7 +79,7 @@ class Deck:
         top_card_color, top_card_type, top_card_id          = self.get_top_card().get_properties()
         player_card_color, player_card_type, player_card_id = card.get_properties()
         
-        if top_card_color == player_card_color or top_card_type == player_card_type:
+        if top_card_color == player_card_color or top_card_type == player_card_type and player_card_type != "WILD":
             return {"match":True,"wild":False}
         elif player_card_type == "WILD":
             return {"match":True,"wild":True}

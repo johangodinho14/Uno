@@ -33,7 +33,6 @@ class Computer:
             available_colors = self.__system.parse_config()[-2]
             selected_color   = random.choice(available_colors)
             computer_hand.set_wild_card_color(selected_color,i)
-            
             return {"move":"use_card","card":computer_hand.get_cards()[i]}
 
         elif match_result['match'] == True:
@@ -43,7 +42,6 @@ class Computer:
             return {"move":"pull_card","card":None}
 
 
-            
                 
 
 

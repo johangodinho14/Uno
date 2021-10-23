@@ -15,6 +15,7 @@ class Game:
         * Top card used         - Setter - Allows status of the top card to be set with regards to whether it has already been used
         * Get top card status   - Getter - Gets status of whether the top card has already been used (mainly if it was a power card)
         * Handle power card     - Handles all actions relating to the power cards played e.g. reverse, draw, skip, etc.
+        * Check_win             - Checks if the game by verifying if any of the players have an empty hand
         
     
     Dependencies:
@@ -67,6 +68,7 @@ class Game:
         
         print("\nTop card            : " + self.__deck.get_top_card().get_properties()[-1])    
         print("Computer card count : "   + str(len(self.__computer_hand.get_cards())))
+        print("Deck card count     : "   + str(len(self.__deck.get_cards())))
 
         self.__player_hand.show_cards()
 
@@ -113,4 +115,13 @@ class Game:
         #If the top card isn't a wild card we make sure all wild cards in the deck are resetted to black
         if card_type != "WILD":                    
              self.__deck.reset_wild_card_color()
-        
+    
+    def check_win(self):
+        if len(self.__computer_hand.get_cards()) == 0 and len(self.__player_hand.get_cards()) == 0:
+            return {"game_over":True, "winner":"Draw"}
+        elif len(self.__computer_hand.get_cards()) == 0:
+            return {"game_over":True, "winner":"Computer"}
+        elif len(self.__player_hand.get_cards()) == 0:
+            return {"game_over":True, "winner":"Player"}
+        else:
+            return {"game_over":False, "winner":None}

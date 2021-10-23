@@ -12,15 +12,24 @@ menu        = Menu()
 system      = System()
 computer    = Computer()
 
-def computer_turn(deck,computer_hand):
-    print("Computer is thinking...")
+def computer_turn(deck,computer_hand,game):
+    print("\nComputer is thinking...")
+    time.sleep(1.5)
 
-    computer_hand.show_cards()
-    print(computer.check_move(deck,computer_hand)['move'])
-    print(computer.check_move(deck,computer_hand)['card'].get_properties())
+    computer_move_response = computer.check_move(deck,computer_hand)
+    computer_move = computer_move_response['move']
+    computer_card = computer_move_response['card']
 
-    input()
-
+    if computer_move == "use_card":
+        print("\nComputer used : ", computer_card.get_properties()[-1])
+        computer_hand.transfer_card(computer_card,deck)
+        game.top_card_used(False)
+        input("Press enter to continue")
+    else:
+        game.top_card_used(True)
+        print("\nComputer drew a card from the deck")
+        deck.draw(computer_hand,amount=1)
+        input("Press enter to continue")
 
 def player_turn(game,deck,player_hand):
     #Displaying Player Stats and Sub-Menu
@@ -84,23 +93,28 @@ def player_turn(game,deck,player_hand):
 #Functions
 def start_game():   
     #Initialising the game
-    game          = Game(initial_cards=7)
+    game                 = Game(initial_cards=7)
     game.init_game()
-    deck          = game.get_deck()
-    player_hand   = game.get_player_hand()
-    computer_hand = game.get_computer_hand()
+    deck                 = game.get_deck()
+    player_hand          = game.get_player_hand()
+    computer_hand        = game.get_computer_hand()
+    game_status_response = game.check_win()
+    game_over            = game_status_response['game_over']
+    winner               = game_status_response['winner']
 
-    while 1:
+    while game_over != True:
         turn = game.get_turn()
 
         if turn == 1:
             player_turn(game=game,deck=deck,player_hand=player_hand)
 
         else:
-            computer_turn(deck=deck,computer_hand=computer_hand)
+            computer_turn(deck=deck,computer_hand=computer_hand,game=game)
         
         game.handle_power_card()
 
+    print(Fore.GREEN+"We have a winner !!!"+winner)
+    time.sleep(10)
 
 def main_menu():
     menu.show_main_menu()
