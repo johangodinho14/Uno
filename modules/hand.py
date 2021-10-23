@@ -46,6 +46,7 @@ class Hand:
 
         print("Your Card count     : "+str(len(player_cards)),"\n")
 
+        print(Fore.LIGHTBLACK_EX)
         print(20*"-" + " Player Cards " + 20*"-" + "\n")
         
         for i in range(0,len(player_cards)):
@@ -55,6 +56,7 @@ class Hand:
 
         print("")
         print(54*"-")
+        print(Fore.YELLOW)
 
     def set_wild_card_color(self,color,card_index):
         self.__cards[card_index].set_color(color)

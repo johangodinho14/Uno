@@ -1,3 +1,4 @@
+from colorama import Fore
 from modules.deck import Deck
 from modules.hand import Hand
 from modules.system import System
@@ -66,7 +67,7 @@ class Game:
         #Clearing sceen and showing top card and computer card count
         self.__system.clear_screen()
         
-        print("\nTop card            : " + self.__deck.get_top_card().get_properties()[-1])    
+        print(Fore.LIGHTRED_EX+"\nTop card            : " + self.__deck.get_top_card().get_properties()[-1])    
         print("Computer card count : "   + str(len(self.__computer_hand.get_cards())))
         print("Deck card count     : "   + str(len(self.__deck.get_cards())))
 

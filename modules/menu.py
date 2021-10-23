@@ -26,7 +26,7 @@ class Menu:
         string += " [3] Quit Game\n\n"
         string += 55*"-"
 
-        print(Fore.YELLOW)
+        print(Fore.LIGHTBLACK_EX)
         print(string)
        
     def show_sub_menu(self):
@@ -37,7 +37,7 @@ class Menu:
         string += " [3] Quit to main menu\n\n"
         string += 54*"-"
 
-        print(Fore.GREEN)
+        print(Fore.LIGHTGREEN_EX)
         print(string)
 
     def show_color_menu(self):
@@ -51,6 +51,6 @@ class Menu:
         string+= "\n"
         string += 54*"-"
 
-        print(Fore.GREEN)
+        print(Fore.LIGHTGREEN_EX)
         print(string)
         print(Fore.YELLOW)
