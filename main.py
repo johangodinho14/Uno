@@ -98,23 +98,27 @@ def start_game():
     deck                 = game.get_deck()
     player_hand          = game.get_player_hand()
     computer_hand        = game.get_computer_hand()
-    game_status_response = game.check_win()
-    game_over            = game_status_response['game_over']
-    winner               = game_status_response['winner']
 
-    while game_over != True:
+    while 1:
         turn = game.get_turn()
+        game_status_response = game.check_win()
+        game_over = game_status_response['game_over']
+        winner    = game_status_response['winner']
 
+        if game_over == True:
+            break
+ 
         if turn == 1:
             player_turn(game=game,deck=deck,player_hand=player_hand)
 
         else:
             computer_turn(deck=deck,computer_hand=computer_hand,game=game)
-        
+
         game.handle_power_card()
 
     print(Fore.GREEN+"We have a winner !!!"+winner)
     time.sleep(10)
+    main_menu()
 
 def main_menu():
     menu.show_main_menu()
