@@ -12,10 +12,11 @@ Running the game:
 
 
 ## Challenge outline
-The challenge picked during this assignment was creating a popular console based game `Uno`. Uno is a card game, where the objective of the game is for the players to lose their cards as soon as possible. The game includes several normal cards along with power cards. I decided to add a bot to the game that is able to play the game with a human player. During the planning stage of the game 
+The challenge picked during this assignment was creating a popular console based game `Uno`. Uno is a card game, where the objective of the game is for the players to lose their cards as soon as possible. The game includes several normal cards along with power cards. I decided to add a bot to the game that is able to play the game with a human player. During the planning stage of the game I discovered potential problems that I would face down the lines, the problems and the potential solutions I thought of have been stated below: 
 
 ### Summary of the problem and proposed solution
 **Problem**
+
 
 **Solution**
 
