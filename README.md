@@ -41,12 +41,12 @@ Task Type | Module name | Short description | Example |
 --- | --- | --- | --- |
 Module | Card | Create a class that will have all methods and properties related to a card | get_properties of card |
 Module | Deck | Create a class that will have all methods and properties related to a Deck | shuffle, draw_cards, etc. |
+Module | Computer | Create a class that will have all methods and properties related to the Computer / Bot | check_move (Decides the move that computer will executed) |
+Module | Hand | Create a class that will have all methods and properties related to a Hand | use_card, add_card to hand, show_all_cards in hand |
+Module | Inputs | Create a class that will have all methods and properties related to all Inputs | get_wild_card_color (Get's user_input) |
+Module | System | Create a class that will have all methods and properties related to the system | read_config, parse_config |
+Module | Menu | Create a class that will have all methods and properties relating to the menu | show_main_menu, show_sub_menu |
 
-3. Modules | Computer | Create a class that will have all methods and properties related to the Computer / Bot | e.g. check_move (Decides the move that computer will executed)
-4. Modules | Hand | reate a class that will have all methods and properties related to a Hand | use_card, add_card to hand, show_all_cards in hand
-5. Modules | Inputs | Create a class that will have all methods and properties related to all Inputs | get_wild_card_color (Get's user_input)                       
-6. Modules | System | Create a class that will have all methods and properties related to the system | read_config, parse_config 
-7. Modules | Menu | Create a class that will have all methods and properties relating to the menu | show_main_menu, show_sub_menu
 
 
 
