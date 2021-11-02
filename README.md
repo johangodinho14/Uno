@@ -66,6 +66,24 @@ Deck | get_cards | Returns the deck as a list |
 Deck | shuffle | Shuffles all the cards in the deck |
 Deck | match | Matches player card to the card at the top of the deck, includes handle for Wild card |
 Deck | reset_wild_card_color | Finds wild card and resets its color back to black | 
+Game | init_game | Runs's all functions required to initialise a new game | 
+Game | get_computer_hand | Returns all cards in the computer hand | 
+Game | get_player_hand | Returns all cards in the player hand | 
+Game | get_deck | Returns deck |
+Game | show_player_stats | Displays count of player and computer cards and displays all cards in player hand | 
+Game | get_turn | Returns Integer representing who's turn it is i:e (1 = Player 2 = Computer) | 
+Game | next_turn | Switches from current player turn to next player turn | 
+Game | top_card_used | Setter - Allows status of the top card to be set with regards to whether it has already been used | 
+Game | get_top_card_status | Handles all actions relating to the power cards played e.g. reverse, draw, skip, etc. | 
+Game | check_win | Checks if the game by verifying if any of the players have an empty hand | 
+
+
+
+
+
+
+
+
 
 
 
