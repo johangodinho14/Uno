@@ -20,7 +20,7 @@ The challenge picked during this assignment was creating a popular console based
 2. Since the game includes cards, I wanted to make sure that the cards being used in the game could be changed without having to hard code them into the main code.
 3. Due to the different moving bits of the game, I wanted to ensure that there isn't one big file that includes most of the code, as it would become difficult to manage the code.
 
-**Potential Solution**
+**Potential Solutions**
 
 Based on the overall problem (challenege) and the potential problems that I discovered during the early planning phases, some of the solutions I planned have been stated below: 
 * Making sure the project follows a modular approach, so that individual elements of the game can be stored in an organised manner in different module files.
