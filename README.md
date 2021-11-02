@@ -55,8 +55,17 @@ Due to the overall game already being decomposed into epic style tasks I was abl
 Module name | Class | Class description | 
 --- | --- | --- |
 Card | get_properties | Get properties of a selected card, output will include card_color, card_type and card_id |
-Card | set_color | Set color of a selected card|
-
+Card | set_color | Set color of a selected card |
+Card | set_color | Set color of a selected card |
+Computer | check_move | Depending on the top card of the deck, this method returns whether the computer should draw a card from the deck or play a card from its hand. |
+Deck | add | Add a card to the deck |
+Deck | populate_deck | Uses class (Card) to populate the deck with cards based onthe the `config.js` file |
+Deck | draw | Draw (amount) number of cards from the deck and deposit them into the player hand provided | 
+Deck | get_top_card | Returns the top card of the deck | 
+Deck | get_cards | Returns the deck as a list | 
+Deck | shuffle | Shuffles all the cards in the deck |
+Deck | match | Matches player card to the card at the top of the deck, includes handle for Wild card |
+Deck | reset_wild_card_color | Finds wild card and resets its color back to black | 
 
 
 
