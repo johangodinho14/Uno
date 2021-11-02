@@ -29,7 +29,7 @@ Based on the overall problem (challenege) and the potential problems that I disc
 
 ## Initial working plan, overall approach, development strategy and approach to quality
 
-Due to the game (Uno) having a lot of moving bits and elements to it, I decided to use the Agile methodology to ensure that the code was robust and reliable while ensuring that its completed on the given timeline. I began the project by planning all the potential problems and the solutions to them. 
+Due to complexity of the card game (Uno) and the given timeline, I decided to use the Agile methodology to ensure that the code was robust and reliable while ensuring that its completed on the given timeline. I began the project by planning all the potential problems and the solutions to them, some of which have already been stated in the section above. The planning phase also included decomposing the overall problems into smaller tasks / epics, this helped me get a definitive list of tasks that need to be completed to complete the overall game on time. Once the planning phase was completed, I moved onto the development of the game, I decided to use a modular approach while usign OOP (Object Oriented Programming), to ensure that the code is robust, readable and easily updatable.
 
 
 
