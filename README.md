@@ -29,7 +29,21 @@ Based on the overall problem (challenege) and the potential problems that I disc
 
 ## Initial working plan, overall approach, development strategy and approach to quality
 
-Due to complexity of the card game (Uno) and the given timeline, I decided to use the Agile methodology to ensure that the code was robust and reliable while ensuring that its completed on the given timeline. I began the project by planning all the potential problems and the solutions to them, some of which have already been stated in the section above. The planning phase also included decomposing the overall problems into smaller tasks / epics, this helped me get a definitive list of tasks that need to be completed to complete the overall game on time. Once the planning phase was completed, I moved onto the development of the game, I decided to use a modular approach while usign OOP (Object Oriented Programming), to ensure that the code is robust, readable and easily updatable. Once the first sprint of development was completed, I made a list of all the bugs and future features that need to be resolved / added during the next sprint. Using this methodology, I kept evaluating the system in each sprint, until the game was completely functional and meet all the requirements, while not having any bugs.
+Due to complexity of the card game (Uno) and the given timeline, I decided to use the Agile methodology to ensure that the code was robust and reliable while ensuring that its completed on the given timeline. I began the project by planning all the potential problems and the solutions to them, some of which have already been stated in the section above. The planning phase also included decomposing the overall problems into smaller tasks / epics, this helped me get a definitive list of tasks that need to be completed to complete the overall game on time. 
+
+Once the planning phase was completed, I moved onto the development of the game, I decided to use a modular approach while usign OOP (Object Oriented Programming), to ensure that the code is robust, readable and easily updatable. Once the first sprint of development was completed, I made a list of all the bugs and future features that need to be resolved / added during the next sprint. Using this methodology, I kept evaluating the system in each sprint, until the game was completely functional and meet all the requirements, while not having any bugs.
+
+## Analysis and decomposition of the overall problem into key ‘epic’ style tasks
+
+As I followed the Agile methodology during this project I was able to decompose the overall problem (Uno game) into individual componenets / epic style tasks, these allowed me to have a better overview of all the tasks that needed to be completed before the game could be completed. I took an Object Oriented approach when it came to decomposing the overall problem. I split each element of the game into a class / module of its own so that I could easily create small tasks. Some of the different tasks that the problem was decomposed into have been stated below : 
+
+1. Modules -> Card      -> Create a class that will have all methods and properties related to a card                e.g. get_properties of card
+2. Modules -> Deck      -> Create a class that will have all methods and properties related to a Deck                e.g. shuffle, draw_cards, etc.
+3. Modules -> Computer  -> Create a class that will have all methods and properties related to the Computer / Bot    e.g. check_move (Decides the move that computer will executed)
+4. Modules -> Hand      -> Create a class that will have all methods and properties related to a Hand                e.g. use_card, add_card to hand, show_all_cards in hand
+5. Modules -> Inputs    -> Create a class that will have all methods and properties related to all Inputs            e.g. get_wild_card_color (Get's user_input)                       
+6. Modules -> System    -> Create a class that will have all methods and properties related to the system            e.g. read_config, parse_config 
+                        
 
 
 
