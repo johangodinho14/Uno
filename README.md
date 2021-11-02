@@ -48,7 +48,14 @@ Module | System | Create a class that will have all methods and properties relat
 Module | Menu | Create a class that will have all methods and properties relating to the menu | show_main_menu, show_sub_menu |
 File | Main | Create a python file that will use all the different modules and set the logic of the game | use of modules such as deck, hand, etc. |
 
+## Initial object-oriented design ideas and planned phased breakdown into smaller tasks 
 
+Due to the overall game already being decomposed into epic style tasks I was able to use the tasks to further explore the various classes that I was going to include within each module. Shown below is a breakdown of the classes that were planned to be created within each module and what they're purpose was.
+
+Module name | Class | Class description | 
+--- | --- | --- |
+Card | Card | get_properties | Get properties of a selected card, output will include card_color, card_type and card_id |
+Card | Card | set_color | Set color of a selected card|
 
 
 
