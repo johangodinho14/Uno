@@ -41,7 +41,7 @@ Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
 Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269 | 
 
-1. Modules | Card | Create a class that will have all methods and properties related to a card | get_properties of card | 
+Modules | Card | Create a class that will have all methods and properties related to a card | get_properties of card | 
 2. Modules | Deck | Create a class that will have all methods and properties related to a Deck | shuffle, draw_cards, etc.
 3. Modules | Computer | Create a class that will have all methods and properties related to the Computer / Bot | e.g. check_move (Decides the move that computer will executed)
 4. Modules | Hand | reate a class that will have all methods and properties related to a Hand | use_card, add_card to hand, show_all_cards in hand
