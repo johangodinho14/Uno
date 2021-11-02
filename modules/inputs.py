@@ -4,13 +4,7 @@ from modules.system import System
 class Inputs:
     '''
     About - Includes all functions relating to various inputs:
-        * Add                      - Add cards to the card
-        * Get_cards                - Returns all cards in the player hand
-        * Transfer_card            - Moves / Transfers a given card from the player hand to the main deck
-        * Show_cards               - Displays / Prints all the cards in a player's hand
-        * Set_wild_card_color      - Finds wild card and changes its color to the given argument / parameter
-        * Use_card                 - checks if a player is allowed to use a card, if true it uses the card else it pulls a card from the deck to player hand
-        * Check_for_matching_cards - checks the player / computer hand for a card that matches the top card of the deck
+        * Get_wild_card_color - Get's user input and returns value, includes validation
 
     Dependencies:
         * Internal - Menu

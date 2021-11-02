@@ -84,6 +84,10 @@ Hand | show_cards | Displays / Prints all the cards in the player hand |
 Hand | set_wild_card_color | Finds wild card in hand and changes its color to the given arg (color) | 
 Hand | use_card | Checks if player is allowed to use a card, if true it uses the card else it pull a card from the deck to the player hand | 
 Hand | check_for_matching_cards | checks the player / computer hand for a card that matches the top card of the deck | 
+Inputs | get_wild_card_color | Get's user input and returns value, includes validation | 
+Menu | show_main_menu | Displays Main Menu | 
+Menu | show_sub_menu | Displays Sub Menu | 
+Menu | show_color_menu | Displays Color Menu on wild card color selection | 
 
 
 
