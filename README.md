@@ -107,6 +107,8 @@ Throughout the development phase I have tried to use good programming standards 
 9. Deep nested loops and conditionals were avoided to keep the logic of the code simple and make it easy to edit in the future.
 10. Comments and doc-strings were used within each module to make sure that the code is well documented.
 
+# Phases / Sprints of development 
+## Phase 1
 
 
 
