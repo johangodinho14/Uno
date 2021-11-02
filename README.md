@@ -27,4 +27,9 @@ Based on the overall problem (challenege) and the potential problems that I disc
 2. Making sure the proect followed OOP, to ensure the use of abstraction and simplicity in the main code. This would help increase readability and also ensure that the code can be managed easily.
 3. Making sure that the game is able to read a config file that will include default settings of the game, such as the cards that are to be used in the deck
 
+## Initial working plan, overall approach, development strategy and approach to quality
+
+Due to the game (Uno) having a lot of moving bits and elements to it, I decided to use the Agile methodology to ensure that the code was robust and reliable while ensuring that its completed on the given timeline. I began the project by planning all the potential problems and the solutions to them. 
+
+
 
