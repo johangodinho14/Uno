@@ -118,6 +118,7 @@ The 1st phase of development was completing by carrying out various tests on the
 
 Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
 --- | --- | --- | --- | --- | --- | 
+Card | set_color | Test if the color of the card is changed when the set_color method is used | The colour of the card should be updated | The colour of the card updated | NA | 
 
 
 
