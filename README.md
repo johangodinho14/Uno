@@ -138,7 +138,13 @@ The 2nd phase of development was completing by carrying out various tests on the
 
 Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
 --- | --- | --- | --- | --- | --- | 
-System |read_config | Test if the read_config method returnes the `json` config stored in the external file `config.json` | The method should read the data from `config.json` and return a properly structured JSON | The method returned a propertly structured JSON after reading the data from `config.json` | NA | 
+System | read_config | Test if the read_config method returns the `json` config stored in the external file `config.json` | The method should read the data from `config.json` and return a properly structured JSON | The method returned a propertly structured JSON after reading the data from `config.json` | NA | 
+System | parse_config | Test if the parse_config method returns a list of card_colors and card_types, read form `config.json`  | The method should return all the card_colors and card_types as lists present in the `config.json` file | The method returned a list of all card_colors and card_types as lists | NA |
+Menu | show_main_menu | Test if the method diplays a nicely formatted main menu with all options present | The method should display a nicely formatted menu with all options | The menu did print out the options but the formatting wasn't properly alligned | The fix to formatting the `--` that weren't aligned was to properly calculate the spacing needed | 
+Inputs | get_wild_card_color | test if the method is able to apply validation and prevent unknown options from being selected | The method should prompt the user to re-enter the option if it's invalid | The validation worked and told the user that the selected option doesn't exist, but it didn't allow the user to re-enter the option | I fixed this by running a while loop around the input until the input provided by the user was valid. | 
+
+
+
 
 
 
