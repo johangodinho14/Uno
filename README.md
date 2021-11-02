@@ -37,16 +37,16 @@ Once the planning phase was completed, I moved onto the development of the game,
 
 As I followed the Agile methodology during this project I was able to decompose the overall problem (Uno game) into individual componenets / epic style tasks, these allowed me to have a better overview of all the tasks that needed to be completed before the game could be completed. I took an Object Oriented approach when it came to decomposing the overall problem. I split each element of the game into a class / module of its own so that I could easily create small tasks. Some of the different tasks that the problem was decomposed into have been stated below : 
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+Task Type | # Module name | # Module description | # Short description | # Example
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
 Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
-1. Modules -> Card      -> Create a class that will have all methods and properties related to a card                e.g. get_properties of card
-2. Modules -> Deck      -> Create a class that will have all methods and properties related to a Deck                e.g. shuffle, draw_cards, etc.
-3. Modules -> Computer  -> Create a class that will have all methods and properties related to the Computer / Bot    e.g. check_move (Decides the move that computer will executed)
-4. Modules -> Hand      -> Create a class that will have all methods and properties related to a Hand                e.g. use_card, add_card to hand, show_all_cards in hand
-5. Modules -> Inputs    -> Create a class that will have all methods and properties related to all Inputs            e.g. get_wild_card_color (Get's user_input)                       
-6. Modules -> System    -> Create a class that will have all methods and properties related to the system            e.g. read_config, parse_config 
-7. Modules -> Menu      -> Create a class that will have all methods and properties relating to the menu             e.g. show_main_menu, show_sub_menu
+1. Modules | Card | Create a class that will have all methods and properties related to a card | get_properties of card
+2. Modules | Deck | Create a class that will have all methods and properties related to a Deck | shuffle, draw_cards, etc.
+3. Modules | Computer | Create a class that will have all methods and properties related to the Computer / Bot | e.g. check_move (Decides the move that computer will executed)
+4. Modules | Hand | reate a class that will have all methods and properties related to a Hand | use_card, add_card to hand, show_all_cards in hand
+5. Modules | Inputs | Create a class that will have all methods and properties related to all Inputs | get_wild_card_color (Get's user_input)                       
+6. Modules | System | Create a class that will have all methods and properties related to the system | read_config, parse_config 
+7. Modules | Menu | Create a class that will have all methods and properties relating to the menu | show_main_menu, show_sub_menu
 
 
 
