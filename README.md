@@ -157,6 +157,7 @@ Module name | Class | Test description | Expected outcome | Actual outcome | How
 Computer | check_move | Test if the check_move methods returns {"move":"pull_card","card":None} when the computer hand doesn't have any cards that match the top deck card | The method should return {"move":"pull_card","card":None} | The test returned {"move":"pull_card","card":None} | NA | 
 Computer | check_move | Test if the check_move methods returns {"move":"use_card","card":matching_card} when the computer hand has a card that matches the top deck card |  The method should return {"move":"pull_card","card":matching card} | The test returned {"move":"pull_card","card":matching card} | NA |
 Game | get_turn | Test if the next_turn method updates the player turn to the next player | The next_turn method should update the player turn to the next player | The player turn wasn't updated when the next_turn method was used | This bug was resolved by updating the variable instead of re-assigning it to the same value | 
+Game | check_win | Test if the check_win method returns {"game_over":True, "winner":"Computer"} if the computer hand is empty first  | The method should return {"game_over":True, "winner":"Computer"} | The method returned {"game_over":False, "winner":None} | The bug was caused due to an typo made in the if statement that checked the how many cards were left in the computer hand, fixing the typo resolved the bug. | 
 
 
 
