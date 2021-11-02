@@ -23,8 +23,8 @@ The challenge picked during this assignment was creating a popular console based
 **Potential Solutions**
 
 Based on the overall problem (challenege) and the potential problems that I discovered during the early planning phases, some of the solutions I planned have been stated below: 
-* Making sure the project follows a modular approach, so that individual elements of the game can be stored in an organised manner in different module files.
-* Making sure the proect followed OOP, to ensure the use of abstraction and simplicity in the main code. This would help increase readability and also ensure that the code can be managed easily.
-* Making sure that the game is able to read a config file that will include default settings of the game, such as the cards that are to be used in the deck
+1. Making sure the project follows a modular approach, so that individual elements of the game can be stored in an organised manner in different module files.
+2. Making sure the proect followed OOP, to ensure the use of abstraction and simplicity in the main code. This would help increase readability and also ensure that the code can be managed easily.
+3. Making sure that the game is able to read a config file that will include default settings of the game, such as the cards that are to be used in the deck
 
 
