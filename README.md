@@ -163,8 +163,17 @@ Game | check_win | Test if the check_win method returns {"game_over":True, "winn
 Some of the key design challenges I faced during the creation of the game have been stated below:
 1. Handling player turns when a power card such as `reverse` or `skip turn` is played.
 2. Handling wild cards and ensuring that they are reset to `BLACK` once they are returned to the deck
-3. Managing code complexity and increasing abstraction in the code
-4. 
+3. Managing code complexity and utilising abstraction in the code
+4. Updating player stats everytime any changes happen, e.g. player uses a card
+5. Making sure that all inputs are validated, and the user is not able to break the program 
+
+Shown below are the solutions using which the key challenges were resolved:
+1. This challenge was resolved by creating two methods in the game class, these were `handle_power_cards` and `next_turn`, these allowed me to handle all power cards such as `reverse`, `skip turn`, etc.
+2. Handling wild cards and resetting them to their default color was carried out using the method `reset_wild_card_color` as this method allowed me to iterate through all the cards of the deck and find any cards with the type `WILD`, any cards with the type wild would be reset back to the colour `BLACK`.
+3. Managing code complexity and utilising abstraction in the code was simple to resolve, I used the planning document that included a breakdown of all of the modules and classes to create the modules and classes. 
+4. Having the player stats update on the screen, each time a change happens was carried out by creating a function within the hand module that displayed all the player_stats, each time a change happens, the terminal would be cleared and the updated status would be displayed.
+5. Validating the input involved making sure that I used error handling to ensure the user doens't enter invalid data types or invalid options that would break the game. It also involved creating loops around the input to ensure that the user has multiple attempts to select the right option.
+
 
 
 
