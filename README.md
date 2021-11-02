@@ -174,9 +174,17 @@ Shown below are the solutions using which the key challenges were resolved:
 4. Having the player stats update on the screen, each time a change happens was carried out by creating a function within the hand module that displayed all the player_stats, each time a change happens, the terminal would be cleared and the updated status would be displayed.
 5. Validating the input involved making sure that I used error handling to ensure the user doens't enter invalid data types or invalid options that would break the game. It also involved creating loops around the input to ensure that the user has multiple attempts to select the right option.
 
+# Evaluation
+
+## Analysis with embedded examples of key code refactoring, reuse, smells.
 
 
+## Implementation and effective use of ‘advanced’ programming principles (with examples).
 
+
+## Features showcase and embedded innovations (with examples) - opportunity to ‘highlight’ best bits.
+
+## Reflective review, opportunities to improve and continued professional development.
 
 
 
