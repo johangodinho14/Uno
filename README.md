@@ -46,6 +46,8 @@ Module | Hand | Create a class that will have all methods and properties related
 Module | Inputs | Create a class that will have all methods and properties related to all Inputs | get_wild_card_color (Get's user_input) |
 Module | System | Create a class that will have all methods and properties related to the system | read_config, parse_config |
 Module | Menu | Create a class that will have all methods and properties relating to the menu | show_main_menu, show_sub_menu |
+File | Main | Create a python file that will use all the different modules and set the logic of the game | use of modules such as deck, hand, etc. |
+
 
 
 
