@@ -128,11 +128,11 @@ Hand | set_wild_card_color | Test if the wild card colour is changed to the give
 
 ## Phase 2 + Ensuring Quality through tests and resolving bugs
 
-Phase 1 of development began with the creation of the following modules:
+Phase 2 of development began with the creation of the following modules:
 
-System - This module handled all operations related to the system, such as clearing the console, reading and parsing the config file, etc.
-Menu   - This module handled all operations related to displaying the three different menus that the game had i:e, main menu, sub menu, wild color menu.
-Inputs - This module handled Input operations and also included validation, it's main job was to handle different input while maintaining validation and returning the output in the end.
+1. System - This module handled all operations related to the system, such as clearing the console, reading and parsing the config file, etc.
+2. Menu   - This module handled all operations related to displaying the three different menus that the game had i:e, main menu, sub menu, wild color menu.
+3. Inputs - This module handled Input operations and also included validation, it's main job was to handle different input while maintaining validation and returning the output in the end.
 
 The 2nd phase of development was completing by carrying out various tests on the modules and hte Classes held within them. Some of the tests that were carried out have been displayed in the table below:
 
@@ -142,6 +142,19 @@ System | read_config | Test if the read_config method returns the `json` config 
 System | parse_config | Test if the parse_config method returns a list of card_colors and card_types, read form `config.json`  | The method should return all the card_colors and card_types as lists present in the `config.json` file | The method returned a list of all card_colors and card_types as lists | NA |
 Menu | show_main_menu | Test if the method diplays a nicely formatted main menu with all options present | The method should display a nicely formatted menu with all options | The menu did print out the options but the formatting wasn't properly alligned | The fix to formatting the `--` that weren't aligned was to properly calculate the spacing needed | 
 Inputs | get_wild_card_color | test if the method is able to apply validation and prevent unknown options from being selected | The method should prompt the user to re-enter the option if it's invalid | The validation worked and told the user that the selected option doesn't exist, but it didn't allow the user to re-enter the option | I fixed this by running a while loop around the input until the input provided by the user was valid. | 
+
+## Phase 3 + Ensuring Quality through tests and resolving bugs
+
+Phase 3 of development began with the creation of the following modules:
+
+1. Game - The sole purpose of this module was to add a level of abstraction to the code by importing all the dependencies inside it and batching some of the methods into funcitons. This module also controlled various elements of the game such as handling the player turns, checking win conditions, etc.
+2. Computer - The purpose of this module was to carry out the main functionalities relating to the computer and it's moves.
+
+The 3rd phase of development was completing by carrying out various tests on the modules and hte Classes held within them. Some of the tests that were carried out have been displayed in the table below:
+
+Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
+Computer | check_move | Test if the check_move methods returns {"move":"pull_card","card":None} when the computer hand doesn't have any cards that match the top deck card  | The method should return {"move":"pull_card","card":None} | The test returned {"move":"pull_card","card":None} | NA | 
+Computer | check_move | Test if the check_move methods returns {"move":"use_card","card":matching_card} when the computer hand has a card that matches the top deck card | The method should return {"move":"pull_card","card":matching card} | The test returned {"move":"pull_card","card":matching card} | NA | 
 
 
 
