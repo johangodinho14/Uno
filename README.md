@@ -92,9 +92,14 @@ System | read_config | Reads config file and returns the file_ object |
 System | parse_config | Loads in json file and parses it. Returns card_colors (list) and  card_types (list) | 
 System | clear_screen | Clears the terminal | 
 
+# Development
+## Adoption and use of ‘good’ standards
+Throughout the development phase I have tried to use good programming standards throughout the code to make sure that the code is readable, robust and avoids repitition or code smells. Some of the good programming practices that were incorporated in the code were:
 
-
-
+1. Standard naming conventions were used (Use of snake_case throughout the project).
+2. Pure functions were created where possible to ensure that there were mininmal side effects if the code were to be changed or re-factored in the future.
+3. Use of OOP (Object Oriented Programming) was made to ensure that concepts such as abstraction could be used within the code to improve simplicity and readability of the code.
+4. The modular programming approach was utilised to split the classes into different files, this helps manage the code in various files and makes it easy to find code snippets and update them when needed.
 
 
 
