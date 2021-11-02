@@ -40,6 +40,7 @@ As I followed the Agile methodology during this project I was able to decompose 
 Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11 |
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |--- |
 Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269 | 
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |--- |
 
 Modules | Card | Create a class that will have all methods and properties related to a card | get_properties of card | 
 2. Modules | Deck | Create a class that will have all methods and properties related to a Deck | shuffle, draw_cards, etc.
