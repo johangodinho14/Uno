@@ -159,6 +159,13 @@ Computer | check_move | Test if the check_move methods returns {"move":"use_card
 Game | get_turn | Test if the next_turn method updates the player turn to the next player | The next_turn method should update the player turn to the next player | The player turn wasn't updated when the next_turn method was used | This bug was resolved by updating the variable instead of re-assigning it to the same value | 
 Game | check_win | Test if the check_win method returns {"game_over":True, "winner":"Computer"} if the computer hand is empty first  | The method should return {"game_over":True, "winner":"Computer"} | The method returned {"game_over":False, "winner":None} | The bug was caused due to an typo made in the if statement that checked the how many cards were left in the computer hand, fixing the typo resolved the bug. | 
 
+# Reflection on key design challenges, innovations and how they were solved
+Some of the key design challenges I faced during the creation of the game have been stated below:
+1. Handling player turns when a power card such as `reverse` or `skip turn` is played.
+2. Handling wild cards and ensuring that they are reset to `BLACK` once they are returned to the deck
+3. Managing code complexity and increasing abstraction in the code
+4. 
+
 
 
 
