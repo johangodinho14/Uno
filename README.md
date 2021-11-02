@@ -126,6 +126,20 @@ Deck | match | Test if the match method returns the correct dictionary when a ca
 Hand | get_cards | Test if all cards in the player hand (list) are returned when the get_cards method is called | The test should return all the cards the player hand currently has | The test returned all the cards in the player hand | NA | 
 Hand | set_wild_card_color | Test if the wild card colour is changed to the given colour when the method is called | The colour of the wild card should change and be updated in the player hand | The colour of the wild card was not updated in the player hand  | After going through the code I noticed that the conditional statement that checked the card type had the word "wild" written in lower case instead of upper case which caused the issue of no wild card being detected in the player hand and hence the colour of the wild card was never updated. | 
 
+## Phase 2 + Ensuring Quality through tests and resolving bugs
+
+Phase 1 of development began with the creation of the following modules:
+
+System - This module handled all operations related to the system, such as clearing the console, reading and parsing the config file, etc.
+Menu   - This module handled all operations related to displaying the three different menus that the game had i:e, main menu, sub menu, wild color menu.
+Inputs - This module handled Input operations and also included validation, it's main job was to handle different input while maintaining validation and returning the output in the end.
+
+The 2nd phase of development was completing by carrying out various tests on the modules and hte Classes held within them. Some of the tests that were carried out have been displayed in the table below:
+
+Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
+System | read_config | Test if the read_config method returnes the `json` config stored in the external file `config.json` | The method should read the data from `config.json` and return a properly structured JSON  | The method returned a propertly structured JSON after reading the data from `config.json` | NA | 
+
+
 
 
 
