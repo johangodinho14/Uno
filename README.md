@@ -11,9 +11,9 @@ Running the game:
 4. Type in `pythn main.py` and hit enter
 
 
-##Challenge outline
+## Challenge outline
 
-###Summary of the problem and proposed solution
+### Summary of the problem and proposed solution
 **Problem**
 
 **Solution**
