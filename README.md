@@ -108,7 +108,19 @@ Throughout the development phase I have tried to use good programming standards 
 10. Comments and doc-strings were used within each module to make sure that the code is well documented.
 
 # Phases / Sprints of development 
-## Phase 1
+## Phase 1 + Ensuring Quality through tests and resolving bugs
+Phase 1 of development began with the creation of the following modules:
+1. Card - This module included the Card class which would help store card details such as (card type and card color), the class also had a getter method which allowed the user to access properties of the card. 
+2. Deck - This module was one of the more sophisticated parts of the program due to the fact that it had important properties and methods. All the properties of the class were private so that they could only be accessed from within the Object. Some of the methods that were programmed into the Deck class during this phase included, Shuffle (Shuffles all cards in the deck (list)), Draw card (Draws a card and moves it from the deck to the provided hand) and more.
+3. Hand - This module was another important one, since the testing of some of the methods from the Deck class heavily relied on neededing interaction with the Hand class. The Hand class acted as a real life hand that would hold the player and computer cards and have all properties and methods related to the hand, such as Transfer_card (Transfering a card from the hand to the deck), Show_cards (Displaying / Printing all cards in the player hand.)
+
+The 1st phase of development was completing by carrying out various tests on the modules and hte Classes held within them. Some of the tests that were carried out have been displayed in the table below:
+
+Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
+--- | --- | --- | --- | --- | --- | 
+
+
+
 
 
 
