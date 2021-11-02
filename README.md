@@ -88,6 +88,10 @@ Inputs | get_wild_card_color | Get's user input and returns value, includes vali
 Menu | show_main_menu | Displays Main Menu | 
 Menu | show_sub_menu | Displays Sub Menu | 
 Menu | show_color_menu | Displays Color Menu on wild card color selection | 
+System | read_config | Reads config file and returns the file_ object | 
+System | parse_config | Loads in json file and parses it. Returns card_colors (list) and  card_types (list) | 
+System | clear_screen | Clears the terminal | 
+
 
 
 
