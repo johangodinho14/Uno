@@ -1,7 +1,7 @@
 # Uno
 Repo for Uno game created using python.
 
-Dependencies: 
+Dependencies / Prerequisite: 
 1. Colorama -> Install colrama using `pip install colorama`
 
 Running the game: 
