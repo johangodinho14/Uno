@@ -155,9 +155,8 @@ The 3rd phase of development was completing by carrying out various tests on the
 Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
 --- | --- | --- | --- | --- | --- | 
 Computer | check_move | Test if the check_move methods returns {"move":"pull_card","card":None} when the computer hand doesn't have any cards that match the top deck card | The method should return {"move":"pull_card","card":None} | The test returned {"move":"pull_card","card":None} | NA | 
---- | --- | --- | --- | --- | --- | 
+Computer | check_move | Test if the check_move methods returns {"move":"use_card","card":matching_card} when the computer hand has a card that matches the top deck card |  The method should return {"move":"pull_card","card":matching card} | The test returned {"move":"pull_card","card":matching card} | NA |
 
-Computer | check_move | Test if the check_move methods returns {"move":"use_card","card":matching_card} when the computer hand has a card that matches the top deck card | The method should return {"move":"pull_card","card":matching card} | The test returned {"move":"pull_card","card":matching card} | NA | 
 
 
 
