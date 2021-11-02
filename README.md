@@ -137,6 +137,8 @@ Inputs - This module handled Input operations and also included validation, it's
 The 2nd phase of development was completing by carrying out various tests on the modules and hte Classes held within them. Some of the tests that were carried out have been displayed in the table below:
 
 Module name | Class | Test description | Expected outcome | Actual outcome | How bugs were resolved | 
+--- | --- | --- | --- | --- | --- | 
+
 System | read_config | Test if the read_config method returnes the `json` config stored in the external file `config.json` | The method should read the data from `config.json` and return a properly structured JSON  | The method returned a propertly structured JSON after reading the data from `config.json` | NA | 
 
 
