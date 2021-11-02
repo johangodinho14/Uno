@@ -100,6 +100,14 @@ Throughout the development phase I have tried to use good programming standards 
 2. Pure functions were created where possible to ensure that there were mininmal side effects if the code were to be changed or re-factored in the future.
 3. Use of OOP (Object Oriented Programming) was made to ensure that concepts such as abstraction could be used within the code to improve simplicity and readability of the code.
 4. The modular programming approach was utilised to split the classes into different files, this helps manage the code in various files and makes it easy to find code snippets and update them when needed.
+5. DRY (Don't Repeat Yourself) was used throughout the code to avoid unneccesary duplication of code.
+6. Long lines of code with chained commands were avoided 
+7. Error handling and validation was added to different parts of the code to ensure that the user isn't allowed to break the program by providing it with invalid data types when prompted for input
+8. The use of gloabal variables that keep track of state change was avoided, this was incorportaed as a feature into the `game` class instead.
+9. Deep nested loops and conditionals were avoided to keep the logic of the code simple and make it easy to edit in the future.
+10. Comments and doc-strings were used within each module to make sure that the code is well documented.
+
+
 
 
 
