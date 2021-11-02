@@ -122,9 +122,7 @@ Card | set_color | Test if the color of the card is changed when the set_color m
 Card | get_properties | Test if the properties of the card are returned when the get_properties method is used | The method should return the colour, type and id of the card | The method returned the colour, type and id of the card | NA | 
 Deck | add | Test if a given card is added to teh deck when the add method is called| The method should add the given cards to the deck (list)  | The passed card was successfully added to the deck | NA | 
 Deck | draw | Test if the draw method is able to draw a given amount of cards from the deck into the given player hand | The method should move the given amount of cards from the deck into the given hand (param / arg)  | This test was partially successfull as the method was able to move the cards to the player hand but it didn't delete the cards from the deck, this caused duplication of cards | I had to ensure that all the cards moved to the player hand were deleted from the deck (list) | 
-Deck | match | This method is supposed to check if the card that the player has decided to play matches any of the following criteria 
-
-1. Is a wild card
+Deck | match | This method is supposed to check if the card that the player has decided to play matches any of the following criteria 1. Is a wild card
 2. Matches the colour of the top card of the deck
 3. Matches the number of the top cards of the deck
 4. Return False values if none of the above were satisfied. | The test should return a dictionary containing {"match":True,"wild":False} when a card matches the top card but isn't a wild card | The method returned {"match":True,"wild":False} when a card matched the top card of the deck and wasn't a wild card | NA | 
