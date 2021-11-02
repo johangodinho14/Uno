@@ -38,10 +38,9 @@ Once the planning phase was completed, I moved onto the development of the game,
 As I followed the Agile methodology during this project I was able to decompose the overall problem (Uno game) into individual componenets / epic style tasks, these allowed me to have a better overview of all the tasks that needed to be completed before the game could be completed. I took an Object Oriented approach when it came to decomposing the overall problem. I split each element of the game into a class / module of its own so that I could easily create small tasks. Some of the different tasks that the problem was decomposed into have been stated below : 
 
 Task Type | Module name | Short description | Example 
---- | --- | --- | --- |
+Module | Card | Create a class that will have all methods and properties related to a card | get_properties of card |
 --- | --- | --- | --- |
 
-Modules | Card | Create a class that will have all methods and properties related to a card | get_properties of card | 
 2. Modules | Deck | Create a class that will have all methods and properties related to a Deck | shuffle, draw_cards, etc.
 3. Modules | Computer | Create a class that will have all methods and properties related to the Computer / Bot | e.g. check_move (Decides the move that computer will executed)
 4. Modules | Hand | reate a class that will have all methods and properties related to a Hand | use_card, add_card to hand, show_all_cards in hand
