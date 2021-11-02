@@ -76,6 +76,19 @@ Game | next_turn | Switches from current player turn to next player turn |
 Game | top_card_used | Setter - Allows status of the top card to be set with regards to whether it has already been used | 
 Game | get_top_card_status | Handles all actions relating to the power cards played e.g. reverse, draw, skip, etc. | 
 Game | check_win | Checks if the game by verifying if any of the players have an empty hand | 
+Game | check_win | Checks if the game by verifying if any of the players have an empty hand | 
+Hand | add | Add cards to the hand |
+Hand | get_cards | Returns all cards in the player hand | 
+Hand | transfer_card | Moves / Transfers a given card from the player hand to the main deck | 
+Hand | show_cards | Displays / Prints all the cards in the player hand | 
+Hand | set_wild_card_color | Finds wild card in hand and changes its color to the given arg (color) | 
+Hand | use_card | Checks if player is allowed to use a card, if true it uses the card else it pull a card from the deck to the player hand | 
+Hand | check_for_matching_cards | checks the player / computer hand for a card that matches the top card of the deck | 
+
+
+
+
+
 
 
 

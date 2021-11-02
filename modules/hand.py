@@ -5,7 +5,7 @@ from modules.inputs import Inputs
 class Hand:
     '''
     About - Includes all functions relating to a player hand (cards a player has):
-        * Add                      - Add cards to the card
+        * Add                      - Add cards to the hand
         * Get_cards                - Returns all cards in the player hand
         * Transfer_card            - Moves / Transfers a given card from the player hand to the main deck
         * Show_cards               - Displays / Prints all the cards in a player's hand
