@@ -54,8 +54,8 @@ Due to the overall game already being decomposed into epic style tasks I was abl
 
 Module name | Class | Class description | 
 --- | --- | --- |
-Card | Card | get_properties | Get properties of a selected card, output will include card_color, card_type and card_id |
-Card | Card | set_color | Set color of a selected card|
+Card | get_properties | Get properties of a selected card, output will include card_color, card_type and card_id |
+Card | set_color | Set color of a selected card|
 
 
 
