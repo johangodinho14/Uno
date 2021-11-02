@@ -43,7 +43,10 @@ As I followed the Agile methodology during this project I was able to decompose 
 4. Modules -> Hand      -> Create a class that will have all methods and properties related to a Hand                e.g. use_card, add_card to hand, show_all_cards in hand
 5. Modules -> Inputs    -> Create a class that will have all methods and properties related to all Inputs            e.g. get_wild_card_color (Get's user_input)                       
 6. Modules -> System    -> Create a class that will have all methods and properties related to the system            e.g. read_config, parse_config 
-                        
+7. Modules -> Menu      -> Create a class that will have all methods and properties relating to the menu             e.g. show_main_menu, show_sub_menu
+
+
+
 
 
 
