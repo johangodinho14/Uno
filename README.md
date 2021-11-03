@@ -187,7 +187,35 @@ There was a phase in the project when the use_card / hit_card (checks if a playe
 
 
 ## Implementation and effective use of ‘advanced’ programming principles (with examples).
-The code displays the use of OOP (Object Oriented Programming), I have also ensured to have a modular approach towards the whole project to help keep the code managable and clean. Apart from this, OOP principles such as abstraction and encapsulation were followed throughout the different classes that are present in the code base. Validation and error handling  has been added throughout the code to ensure that the user isn't able to break the program by providing wrong data types as inputs. The code also includes pure functions / methods in classes since they don't have any side effects and return an expected value each time.
+The code displays the use of OOP (Object Oriented Programming), I have also ensured to have a modular approach towards the whole project to help keep the code managable and clean. Apart from this, OOP principles such as abstraction and encapsulation were followed throughout the different classes that are present in the code base. Validation and error handling  has been added throughout the code to ensure that the user isn't able to break the program by providing wrong data types as inputs. The code also includes pure functions / methods in classes since they don't have any side effects and return an expected value each time. 
+
+Furthermore the use of deeply nested loops or conditional statements has been avoided to help make sure that the code is readable and easily updatable in the future. The code also follows DRY since it avoids repitition as much as possible. The code has also been well documented with doc-strings / single line comments to ensure readability in the future, along with this long lines of code with too many methods chained to each other were avoided, to prevent a chain of errors.
+
+Images to support the above have been shown below:
+
+**Evidence of OOP**
+![image](https://user-images.githubusercontent.com/53049127/140042962-b162a8d1-16d1-48eb-bd93-b19ddb9507e0.png)
+
+**Evidence of modular approach**
+![image](https://user-images.githubusercontent.com/53049127/140043044-8144cf05-d1ea-408b-8b08-7fa0a4990805.png)
+
+**Evidence of abstraction / hiding complexity**
+The use_card method within the Hand class hides a lot of complexity that the reader of the code doesn't see, which helps demonstrate a level of abstraction in Python.
+![image](https://user-images.githubusercontent.com/53049127/140043131-67aa428b-14c9-4a7e-afb9-8fd7f27c8fc7.png)
+
+**Evidence of encapsulation**
+The Card class demonstrates encapsulation as it has private properties that can only be accessed by the Class, hence it has getters and setters as shown in the image below:
+![image](https://user-images.githubusercontent.com/53049127/140043408-ba40f97a-3be8-4bf5-8ef0-2d512596847a.png)
+
+**Evidence of validation & error handling**
+![image](https://user-images.githubusercontent.com/53049127/140043751-51af83b9-d80b-4c28-ac7f-d520c2908d00.png)
+
+**Evidence of pure functions / methods**
+The methods shown below belong to the `Deck` and are pure methods/ functions
+![image](https://user-images.githubusercontent.com/53049127/140043904-d10798ef-e670-4ee7-891e-9fdda266e2b4.png)
+
+**Evidence of use of doc-strings for documentation**
+![image](https://user-images.githubusercontent.com/53049127/140044108-edaa30bd-d55f-4ce0-9039-5008ffba2949.png)
 
 ## Features showcase and embedded innovations (with examples) - opportunity to ‘highlight’ best bits.
 
