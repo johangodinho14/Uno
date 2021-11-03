@@ -187,7 +187,7 @@ There was a phase in the project when the use_card / hit_card (checks if a playe
 
 
 ## Implementation and effective use of ‘advanced’ programming principles (with examples).
-
+The code displays the use of OOP (Object Oriented Programming), I have also ensured to have a modular approach towards the whole project to help keep the code managable and clean. Apart from this, OOP principles such as abstraction and encapsulation were followed throughout the different classes that are present in the code base. Validation and error handling  has been added throughout the code to ensure that the user isn't able to break the program by providing wrong data types as inputs. The code also includes pure functions / methods in classes since they don't have any side effects and return an expected value each time.
 
 ## Features showcase and embedded innovations (with examples) - opportunity to ‘highlight’ best bits.
 
