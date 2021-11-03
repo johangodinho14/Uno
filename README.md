@@ -223,9 +223,8 @@ The methods shown below belong to the `Deck` and are pure methods/ functions
 
 ![image](https://user-images.githubusercontent.com/53049127/140044108-edaa30bd-d55f-4ce0-9039-5008ffba2949.png)
 
-## Features showcase and embedded innovations (with examples) - opportunity to ‘highlight’ best bits.
-
-## Reflective review, opportunities to improve and continued professional development.
+## Reflective review
+Overall the I believe that the project was a success as it is at a playable stage with full validation. The code used within the project was also well built as it uses OOP while incorporting a modular approach. The challenge has helped me learn more and improve my skills as I was able to learn about the key principles of OOP such as abstraction and encapsulation and how they can added to real projects. If the project had a longer timeline I would have increased the scope of it, by creating an extended version of it which would allow two players to play the game against each other. Doing so would allow me to carry out CPD during the process since, I get the opportunity to learn about web sockets and networks, due the game being multiplayer over network. I would have also liked to carry out some automated unit tests on the code rather than the manual tests that were carried out this time due to the lack of time.
 
 
 
