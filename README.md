@@ -175,8 +175,10 @@ Shown below are the solutions using which the key challenges were resolved:
 5. Validating the input involved making sure that I used error handling to ensure the user doens't enter invalid data types or invalid options that would break the game. It also involved creating loops around the input to ensure that the user has multiple attempts to select the right option.
 
 # Evaluation
-
+This section of the README will cover the Evaluation of the project along with any potential improvements that could have been made to it if the timescale was extended.
 ## Analysis with embedded examples of key code refactoring, reuse, smells.
+There was a phase in the project when the use_card / hit_card (checks if a player is allowed to use a card, if true it uses the card else it pulls a card from the deck to player hand) feature of the game was embeded as a function in the `main.py` file. During this phase it was missing some validation and also didn't include the functionality of automatically pulling a card from hte deck if the player doesn't have any usable cards in his/ her hand. This code was re-factored so that it had full-functionality. It was then moved to the `Hand` class, since it was more appropriate to be added there as a method and would also help hide some of the complexity within the code while increasing readability. The before and after of the code has been shown below:
+
 
 
 ## Implementation and effective use of ‘advanced’ programming principles (with examples).
