@@ -1,2 +1,0 @@
-* Wild card sometimes gets drawn as the top card of the deck
-* Computer added functionality
