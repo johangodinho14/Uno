@@ -201,21 +201,26 @@ Images to support the above have been shown below:
 ![image](https://user-images.githubusercontent.com/53049127/140043044-8144cf05-d1ea-408b-8b08-7fa0a4990805.png)
 
 **Evidence of abstraction / hiding complexity**
+
 The use_card method within the Hand class hides a lot of complexity that the reader of the code doesn't see, which helps demonstrate a level of abstraction in Python.
 ![image](https://user-images.githubusercontent.com/53049127/140043131-67aa428b-14c9-4a7e-afb9-8fd7f27c8fc7.png)
 
 **Evidence of encapsulation**
+
 The Card class demonstrates encapsulation as it has private properties that can only be accessed by the Class, hence it has getters and setters as shown in the image below:
 ![image](https://user-images.githubusercontent.com/53049127/140043408-ba40f97a-3be8-4bf5-8ef0-2d512596847a.png)
 
 **Evidence of validation & error handling**
+
 ![image](https://user-images.githubusercontent.com/53049127/140043751-51af83b9-d80b-4c28-ac7f-d520c2908d00.png)
 
 **Evidence of pure functions / methods**
+
 The methods shown below belong to the `Deck` and are pure methods/ functions
 ![image](https://user-images.githubusercontent.com/53049127/140043904-d10798ef-e670-4ee7-891e-9fdda266e2b4.png)
 
 **Evidence of use of doc-strings for documentation**
+
 ![image](https://user-images.githubusercontent.com/53049127/140044108-edaa30bd-d55f-4ce0-9039-5008ffba2949.png)
 
 ## Features showcase and embedded innovations (with examples) - opportunity to ‘highlight’ best bits.
