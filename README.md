@@ -14,6 +14,12 @@ Running the game:
 ## Challenge outline
 The challenge picked during this assignment was creating a popular console based game `Uno`. Uno is a card game, where the objective of the game is for the players to lose their cards as soon as possible. The game includes several normal cards along with power cards. I decided to add a bot to the game that is able to play the game with a human player. During the planning stage of the game I discovered potential problems that I would face down the lines, the problems and the potential solutions I thought of have been stated below: 
 
+## UML Class Diagram
+The UML Class Diagram below displays the planning stage of the project during which I planned out all the classes, their attributes / properties and the methods that they would have. The main.py file planning has also been included, granted that it's not a class, I thought it would be good to have an outline of the functions I was going to need in the main.py file which contains the main program.
+
+Shown below is an image of the UML Class Diagram:
+![Class Diagram](https://user-images.githubusercontent.com/53049127/140048747-df49d8b3-d195-47ca-828f-217691ddcfa4.png)
+
 ### Summary of the problem and proposed solution
 **Potential problems discovered**
 1. Due to the scope of the game being massive, my main goal was to make sure that the code was concise and didn't repeat a lot to ensure simplicity.
@@ -224,7 +230,7 @@ The methods shown below belong to the `Deck` and are pure methods/ functions
 ![image](https://user-images.githubusercontent.com/53049127/140044108-edaa30bd-d55f-4ce0-9039-5008ffba2949.png)
 
 ## Reflective review
-Overall the I believe that the project was a success as it is at a playable stage with full validation. The code used within the project was also well built as it uses OOP while incorporting a modular approach. The challenge has helped me learn more and improve my skills as I was able to learn about the key principles of OOP such as abstraction and encapsulation and how they can added to real projects. If the project had a longer timeline I would have increased the scope of it, by creating an extended version of it which would allow two players to play the game against each other. Doing so would allow me to carry out CPD during the process since, I get the opportunity to learn about web sockets and networks, due the game being multiplayer over network. I would have also liked to carry out some automated unit tests on the code rather than the manual tests that were carried out this time due to the lack of time.
+Overall the I believe that the project was a success as it is at a playable stage with full validation. The code used within the project was also well built as it uses OOP while incorporting a modular approach. The challenge has helped me learn more and improve my skills as I was able to learn about the key principles of OOP such as abstraction and encapsulation and how they can added to real projects. If the project had a longer timeline I would have increased the scope of it, by creating an extended version of it which would allow two players to play the game against each other. Doing so would allow me to carry out CPD during the process since, I get the opportunity to learn about web sockets and networks, due the game being multiplayer over network. I would have also liked to carry out some automated unit tests on the code rather than the manual tests that were carried out this time due to the lack of time. I would have also liked to standardise the code a lot more if the timescale was longer.
 
 
 
