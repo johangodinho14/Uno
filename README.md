@@ -179,6 +179,11 @@ This section of the README will cover the Evaluation of the project along with a
 ## Analysis with embedded examples of key code refactoring, reuse, smells.
 There was a phase in the project when the use_card / hit_card (checks if a player is allowed to use a card, if true it uses the card else it pulls a card from the deck to player hand) feature of the game was embeded as a function in the `main.py` file. During this phase it was missing some validation and also didn't include the functionality of automatically pulling a card from hte deck if the player doesn't have any usable cards in his/ her hand. This code was re-factored so that it had full-functionality. It was then moved to the `Hand` class, since it was more appropriate to be added there as a method and would also help hide some of the complexity within the code while increasing readability. The before and after of the code has been shown below:
 
+**Before**
+![image](https://user-images.githubusercontent.com/53049127/140040856-217b79e0-db51-478a-8d9a-2d561ba12bfd.png)
+
+**After**
+![image](https://user-images.githubusercontent.com/53049127/140040756-0c213562-4f3b-4f53-9a0e-aeff42f1c909.png)
 
 
 ## Implementation and effective use of ‘advanced’ programming principles (with examples).
